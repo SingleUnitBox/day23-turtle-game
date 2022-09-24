@@ -1,6 +1,8 @@
 from turtle import Turtle
 
+
 class Frog(Turtle):
+
     def __init__(self):
         super().__init__()
         self.shape("turtle")
@@ -8,6 +10,8 @@ class Frog(Turtle):
         self.penup()
         self.goto(0, -230)
 
-
     def move_forward(self):
         self.forward(20)
+
+    def refresh(self):
+        self.goto(0, -230)

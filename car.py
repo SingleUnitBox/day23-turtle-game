@@ -1,10 +1,12 @@
 from turtle import Turtle
 import random
+MOVE = 10
 
 
 class Car(Turtle):
     def __init__(self):
         self.all_cars = []
+        self.car_speed = MOVE
 
 
     def create_car(self):
@@ -20,8 +22,12 @@ class Car(Turtle):
 
     def move_forward(self):
         for car in self.all_cars:
-            car.forward(20)
+            car.forward(self.car_speed)
 
     def refresh(self):
         self.goto(250, random.randint(-230, 230))
+
+    def level_up(self):
+        self.car_speed += MOVE
+
 
